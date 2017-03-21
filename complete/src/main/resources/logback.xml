@@ -29,12 +29,14 @@
 		</encoder>
 	</appender>
 	
-	<logger name="hello" level="warn" additivity="false">
-    		<appender-ref ref="FILEROLLING" />
-		<appender-ref ref="SYSLOG" />
+	<logger name="hello" level="debug" additivity="false">
+	   <appender-ref ref="STDOUT" />
+	   <appender-ref ref="FILEROLLING" />
+	   <appender-ref ref="SYSLOG" />
 	</logger>
   
-  <root level="debug">
+  <root level="warn">
     <appender-ref ref="STDOUT" />
   </root>
+
 </configuration>
